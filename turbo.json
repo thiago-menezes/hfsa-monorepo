@@ -1,0 +1,128 @@
+{
+  "$schema": "https://turborepo.com/schema.json",
+  "ui": "tui",
+  "globalEnv": [
+    "NODE_ENV",
+    "AUTH_URL",
+    "AUTH0_ID",
+    "AUTH0_SECRET",
+    "AUTH0_ISSUER",
+    "NEXTAUTH_SECRET",
+    "NEXTAUTH_URL"
+  ],
+  "tasks": {
+    "build": {
+      "dependsOn": ["^build"],
+      "inputs": ["$TURBO_DEFAULT$", ".env*"],
+      "outputs": [
+        ".next/**",
+        "!.next/cache/**",
+        "dist/**",
+        "storybook-static/**"
+      ]
+    },
+    "dev": {
+      "cache": false,
+      "persistent": true
+    },
+    "dev:with-mock": {
+      "cache": false,
+      "persistent": true
+    },
+    "lint": {
+      "dependsOn": ["^build"],
+      "env": [
+        "NODE_ENV",
+        "AUTH_URL",
+        "AUTH0_ID",
+        "AUTH0_SECRET",
+        "AUTH0_ISSUER",
+        "NEXTAUTH_SECRET",
+        "NEXTAUTH_URL"
+      ]
+    },
+    "check-types": {
+      "dependsOn": ["^build"]
+    },
+    "test": {
+      "dependsOn": ["^build"],
+      "inputs": ["$TURBO_DEFAULT$", "**/*.test.{ts,tsx}", "**/*.spec.{ts,tsx}"],
+      "env": [
+        "NODE_ENV",
+        "AUTH_URL",
+        "AUTH0_ID",
+        "AUTH0_SECRET",
+        "AUTH0_ISSUER",
+        "NEXTAUTH_URL"
+      ]
+    },
+    "test:unit": {
+      "dependsOn": ["^build"],
+      "inputs": ["$TURBO_DEFAULT$", "**/*.test.{ts,tsx}"],
+      "env": [
+        "NODE_ENV",
+        "AUTH_URL",
+        "AUTH0_ID",
+        "AUTH0_SECRET",
+        "AUTH0_ISSUER",
+        "NEXTAUTH_URL"
+      ]
+    },
+    "test:integration": {
+      "dependsOn": ["^build"],
+      "inputs": ["$TURBO_DEFAULT$", "**/*.integration.spec.{ts,tsx}"],
+      "env": [
+        "NODE_ENV",
+        "AUTH_URL",
+        "AUTH0_ID",
+        "AUTH0_SECRET",
+        "AUTH0_ISSUER",
+        "NEXTAUTH_URL"
+      ]
+    },
+    "clean": {
+      "cache": false
+    },
+    "format": {
+      "cache": false
+    },
+    "mock:api": {
+      "cache": false,
+      "persistent": true
+    },
+    "start": {
+      "dependsOn": ["build"],
+      "cache": false,
+      "persistent": true
+    },
+    "start:mock": {
+      "dependsOn": ["build"],
+      "cache": false,
+      "persistent": true
+    },
+    "start:mock:main-app": {
+      "dependsOn": ["build"],
+      "cache": false,
+      "persistent": true
+    },
+    "start:docs": {
+      "dependsOn": ["build"],
+      "cache": false,
+      "persistent": true
+    },
+    "start:docs:main-app": {
+      "dependsOn": ["build"],
+      "cache": false,
+      "persistent": true
+    },
+    "storybook": {
+      "cache": false,
+      "persistent": true
+    },
+    "build-storybook": {
+      "dependsOn": ["build"],
+      "outputs": ["storybook-static/**"]
+    }
+  },
+  "globalDependencies": [".env*"]
+}

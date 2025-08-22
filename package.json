@@ -1,0 +1,53 @@
+{
+  "name": "hfsa-monorepo",
+  "version": "1.0.0",
+  "description": "HFSA Monorepo - Hybrid Feature Scope Architecture",
+  "private": true,
+  "scripts": {
+    "build": "turbo run build",
+    "dev": "turbo run dev",
+    "dev:main": "turbo run dev --filter=@hfsa/main-app",
+    "dev:main:with-mock": "turbo run dev:with-mock --filter=@hfsa/main-app",
+    "dev:storybook": "turbo run storybook --filter=@hfsa/design-system",
+    "lint": "turbo run lint",
+    "lint:fix": "turbo run lint:fix",
+    "format": "prettier --write \"**/*.{ts,tsx,md,json}\" && turbo run lint:fix",
+    "check:types": "turbo run check-types",
+    "check:prettier": "prettier . --check",
+    "check:all": "yarn lint && yarn check:types && yarn check:prettier",
+    "test": "turbo run test",
+    "test:unit": "turbo run test:unit",
+    "test:integration": "turbo run test:integration",
+    "clean": "turbo run clean",
+    "reset": "yarn clean && rm -rf node_modules && rm -rf **/node_modules && yarn install",
+    "mock": "turbo run mock:api --filter=@hfsa/main-app",
+    "changeset": "changeset",
+    "version-packages": "changeset version",
+    "release": "turbo run build --filter=./packages/* && changeset publish"
+  },
+  "devDependencies": {
+    "@changesets/changelog-github": "^0.5.1",
+    "@changesets/cli": "^2.29.6",
+    "prettier": "^3.6.2",
+    "turbo": "^2.5.6",
+    "typescript": "5.9.2"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "packageManager": "yarn@4.9.2+sha512.1fc009bc09d13cfd0e19efa44cbfc2b9cf6ca61482725eb35bbc5e257e093ebf4130db6dfe15d604ff4b79efd8e1e8e99b25fa7d0a6197c9f9826358d4d65c3c",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "keywords": [
+    "monorepo",
+    "turborepo",
+    "react",
+    "nextjs",
+    "design-system",
+    "typescript"
+  ],
+  "author": "HFSA Team",
+  "license": "MIT"
+}

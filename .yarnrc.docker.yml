@@ -1,0 +1,2 @@
+# .yarnrc.docker.yml
+nodeLinker: node-modules

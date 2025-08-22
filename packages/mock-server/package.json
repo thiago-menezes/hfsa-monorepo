@@ -1,0 +1,46 @@
+{
+  "name": "@hfsa/mock-server",
+  "version": "1.0.0",
+  "description": "Mock server and documentation for HFSA APIs using OpenAPI spec",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "bin": {
+    "hfsa-mock": "dist/cli.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "start": "node dist/index.js",
+    "start:mock": "node dist/cli.js mock",
+    "start:mock:main-app": "node dist/cli.js mock --spec ../../apps/main-app/public/openapi.yaml",
+    "start:docs": "node dist/cli.js docs",
+    "start:docs:main-app": "node dist/cli.js docs --spec ../../apps/main-app/public/openapi.yaml",
+    "check-types": "tsc --noEmit",
+    "clean": "rm -rf dist"
+  },
+  "keywords": [
+    "openapi",
+    "mock-server",
+    "documentation",
+    "scalar",
+    "prism"
+  ],
+  "author": "HFSA Team",
+  "license": "MIT",
+  "dependencies": {
+    "@stoplight/prism-cli": "^5.14.2",
+    "chalk": "^4.1.2",
+    "commander": "^12.1.0",
+    "cors": "^2.8.5",
+    "express": "^4.21.2",
+    "js-yaml": "^4.1.0"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/express": "^4.17.21",
+    "@types/js-yaml": "^4.0.9",
+    "@types/node": "^24.3.0",
+    "tsx": "^4.20.4",
+    "typescript": "^5.9.2"
+  }
+}
