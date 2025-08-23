@@ -1,6 +1,11 @@
-import { Meta } from '@storybook/blocks';
+import { Meta } from '@storybook/react';
 
-<Meta title="Introduction/Welcome" />
+export const meta: Meta = {
+title: 'Introduction/Welcome',
+parameters: {
+layout: 'centered',
+},
+};
 
 # HFSA Design System
 

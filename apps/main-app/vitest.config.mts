@@ -17,7 +17,6 @@ export default defineConfig({
     },
   },
   test: {
-    threads: false,
     environment: 'jsdom',
     setupFiles: ['.vitest-setup.ts'],
     globals: true,
@@ -29,7 +28,7 @@ export default defineConfig({
         'node_modules/',
         'coverage/',
         '**/*.d.ts',
-        '**/*.stories.{ts,tsx}',
+        '**/*stories.{ts,tsx}',
         '**/*.config.{js,ts,mjs,mts}',
         '**/types.ts',
       ],
@@ -49,13 +48,11 @@ export default defineConfig({
         extends: true,
         test: {
           name: 'unit',
-          threads: false,
           include: ['src/**/.spec.ts', 'src/**/.spec.tsx'],
           exclude: [
             'src/**/.integration.spec.ts',
             'src/**/.integration.spec.tsx',
           ],
-          passWithNoTests: true,
         },
       },
       // Integration tests with Prism mock server

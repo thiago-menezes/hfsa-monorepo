@@ -17,7 +17,6 @@ export default defineConfig({
     },
   },
   test: {
-    threads: false,
     environment: 'jsdom',
     setupFiles: ['.vitest-setup.ts'],
     globals: true,
@@ -28,7 +27,7 @@ export default defineConfig({
         'node_modules/',
         'coverage/',
         '**/*.d.ts',
-        '**/*.stories.{ts,tsx}',
+        '**/*stories.{ts,tsx}',
         '**/*.config.{js,ts,mjs,mts}',
         '**/types.ts',
       ],
@@ -48,7 +47,6 @@ export default defineConfig({
         extends: true,
         test: {
           name: 'unit',
-          threads: false,
           include: ['src/**/.spec.ts', 'src/**/.spec.tsx'],
         },
       },
@@ -59,7 +57,10 @@ export default defineConfig({
           // The plugin will run tests for the stories defined in your Storybook config
           // See options at: https://storybook.js.org/docs/next/writing-tests/integrations/vitest-addon#storybooktest
           storybookTest({
-            configDir: resolve(fileURLToPath(new URL('.', import.meta.url)), '.storybook'),
+            configDir: resolve(
+              fileURLToPath(new URL('.', import.meta.url)),
+              '.storybook',
+            ),
           }),
         ],
         test: {
