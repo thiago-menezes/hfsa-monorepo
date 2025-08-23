@@ -16,21 +16,20 @@ export const Header = async () => {
 
               await signOut({ redirect: false });
 
-              const base = (
-                process.env.AUTH_URL || 'http://localhost:3000'
-              ).replace(/\/$/, '');
-              const returnTo = base;
+              const returnTo = process.env.AUTH_URL;
               const domain = (process.env.AUTH0_ISSUER || '').replace(
                 /\/$/,
                 '',
               );
               const clientId = process.env.AUTH0_ID;
-              if (domain && clientId) {
+
+              if (domain && clientId && returnTo) {
                 const url = `${domain}/v2/logout?client_id=${encodeURIComponent(
                   clientId,
                 )}&returnTo=${encodeURIComponent(returnTo)}`;
                 redirect(url);
               }
+
               redirect('/');
             }}
           >

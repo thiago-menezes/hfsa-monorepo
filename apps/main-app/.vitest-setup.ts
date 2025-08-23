@@ -1,5 +1,9 @@
+import { loadEnv } from 'vite';
 import '@testing-library/jest-dom';
 import { vi } from 'vitest';
+
+// Carrega variáveis do .env
+loadEnv('test', process.cwd());
 
 // Mock NextAuth for tests
 vi.mock('next-auth/react', () => ({
@@ -9,7 +13,3 @@ vi.mock('next-auth/react', () => ({
     status: 'unauthenticated',
   }),
 }));
-
-// Set required environment variables for NextAuth
-process.env.NEXTAUTH_URL = 'http://localhost:3000';
-process.env.NEXTAUTH_SECRET = 'test-secret';
