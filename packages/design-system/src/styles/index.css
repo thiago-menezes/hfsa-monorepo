@@ -1,3 +1,6 @@
+/* Panda CSS base layers */
+@layer reset, base, tokens, recipes, utilities;
+
 /* Base design system styles */
 :root {
   --color-primary: #3b82f6;

@@ -14,18 +14,19 @@
     "./styles": "./dist/styles.css"
   },
   "files": [
-    "dist/**/*"
+    "dist/**/*",
+    "styled-system/**/*"
   ],
   "scripts": {
-    "build": "tsc --project tsconfig.build.json && npm run build:css && npm run copy:assets",
+    "build": "panda codegen && tsc --project tsconfig.build.json && npm run build:css",
     "build:css": "postcss src/styles/index.css -o dist/styles.css",
-    "copy:assets": "./scripts/copy-assets.sh",
+    "prepare": "panda codegen",
     "dev": "tsc --watch & storybook dev -p 6006",
     "check-types": "tsc --noEmit",
     "lint": "eslint src/",
     "clean": "rm -rf dist",
-    "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build",
+    "storybook": "panda cssgen && storybook dev -p 6006",
+    "build-storybook": "panda cssgen && storybook build",
     "test": "vitest run --config vitest.unit.config.mts",
     "test:ui": "vitest --ui",
     "test:unit": "vitest run --project unit",
@@ -52,6 +53,7 @@
   "devDependencies": {
     "@chromatic-com/storybook": "^4.1.1",
     "@hfsa/eslint-config": "workspace:*",
+    "@pandacss/dev": "^1.1.0",
     "@storybook/addon-a11y": "^9.1.3",
     "@storybook/addon-docs": "^9.1.3",
     "@storybook/addon-onboarding": "^9.1.3",

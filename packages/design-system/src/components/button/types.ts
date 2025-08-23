@@ -1,7 +1,7 @@
 import { ButtonHTMLAttributes } from 'react';
 
-type Variant = 'primary' | 'secondary' | 'destructive' | 'outline' | 'ghost' | 'link';
-type Size = 'sm' | 'md' | 'lg' | 'icon';
+type Variant = 'primary' | 'secondary' | 'ghost';
+type Size = 'sm' | 'md' | 'lg';
 
 export type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
   variant?: Variant;

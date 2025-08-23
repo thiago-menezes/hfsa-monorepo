@@ -1,7 +1,7 @@
 'use client';
 
 import { useProductList } from './hooks';
-import styles from './styles.module.css';
+import styles from './styles.module.scss';
 import { currency } from './utils';
 
 export const ProductList = () => {
@@ -10,7 +10,11 @@ export const ProductList = () => {
   if (isLoading) return <p className={styles.loading}>Loading products…</p>;
 
   if (isError)
-    return <p className={`${styles.loading} ${styles.error}`}>Failed to load products.</p>;
+    return (
+      <p className={`${styles.loading} ${styles.error}`}>
+        Failed to load products.
+      </p>
+    );
 
   return (
     <section className={styles.container}>

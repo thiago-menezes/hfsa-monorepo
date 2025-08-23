@@ -1,23 +1,22 @@
 import { clsx } from 'clsx';
-import styles from './styles.module.css';
 import { ButtonProps } from './types';
+import { buttonStyles } from './styles';
 
 export const Button = ({
   variant = 'primary',
   size = 'md',
-  className,
   children,
-  ...rest
+  ...props
 }: ButtonProps) => {
   return (
     <button
       className={clsx(
-        styles.base,
-        styles[variant],
-        styles[size],
-        className,
+        buttonStyles.base,
+        buttonStyles.variants[variant],
+        buttonStyles.sizes[size],
+        props.className,
       )}
-      {...rest}
+      {...props}
     >
       {children}
     </button>

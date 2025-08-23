@@ -29,6 +29,19 @@ const config: StorybookConfig = {
           plugins: [autoprefixer.default],
         },
       },
+      define: {
+        global: 'globalThis',
+      },
+      resolve: {
+        alias: {
+          'react': require.resolve('react'),
+          'react-dom': require.resolve('react-dom'),
+        },
+      },
+      esbuild: {
+        jsx: 'automatic',
+        jsxImportSource: 'react',
+      },
     });
   },
 };

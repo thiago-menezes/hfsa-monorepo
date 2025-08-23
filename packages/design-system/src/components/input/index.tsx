@@ -1,11 +1,11 @@
-import styles from './styles.module.css';
 import { InputProps } from './types';
+import { inputStyles } from './styles';
 
 export const Input = ({ label, ...props }: InputProps) => {
   return (
-    <label className={styles.wrapper}>
-      {label ? <span className={styles.label}>{label}</span> : null}
-      <input className={styles.input} {...props} />
+    <label className={inputStyles.wrapper}>
+      {label ? <span className={inputStyles.label}>{label}</span> : null}
+      <input className={inputStyles.input} {...props} />
     </label>
   );
 };
