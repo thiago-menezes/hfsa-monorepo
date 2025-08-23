@@ -1,5 +1,5 @@
 import { clsx } from 'clsx';
-import { styles } from './styles';
+import styles from './styles.module.css';
 import { ButtonProps } from './types';
 
 export const Button = ({
@@ -13,8 +13,8 @@ export const Button = ({
     <button
       className={clsx(
         styles.base,
-        styles.variants[variant],
-        styles.sizes[size],
+        styles[variant],
+        styles[size],
         className,
       )}
       {...rest}

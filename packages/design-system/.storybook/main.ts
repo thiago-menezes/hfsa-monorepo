@@ -21,13 +21,12 @@ const config: StorybookConfig = {
   staticDirs: ['../src/assets'],
   viteFinal: async (config) => {
     const { mergeConfig } = await import('vite');
-    const tailwindcss = await import('@tailwindcss/postcss');
     const autoprefixer = await import('autoprefixer');
 
     return mergeConfig(config, {
       css: {
         postcss: {
-          plugins: [tailwindcss.default, autoprefixer.default],
+          plugins: [autoprefixer.default],
         },
       },
     });

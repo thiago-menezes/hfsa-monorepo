@@ -40,11 +40,24 @@ export const WithTitle: Story = {
     children: (
       <div>
         <p>Are you sure you want to delete this item?</p>
-        <div className="flex gap-2 mt-4">
-          <button className="px-4 py-2 bg-red-600 text-white rounded">
+        <div style={{ display: 'flex', gap: '0.5rem', marginTop: '1rem' }}>
+          <button style={{ 
+            padding: '0.5rem 1rem', 
+            backgroundColor: '#dc2626', 
+            color: 'white', 
+            borderRadius: '0.375rem',
+            border: 'none',
+            cursor: 'pointer'
+          }}>
             Delete
           </button>
-          <button className="px-4 py-2 bg-gray-300 rounded">Cancel</button>
+          <button style={{ 
+            padding: '0.5rem 1rem', 
+            backgroundColor: '#d1d5db', 
+            borderRadius: '0.375rem',
+            border: 'none',
+            cursor: 'pointer'
+          }}>Cancel</button>
         </div>
       </div>
     ),

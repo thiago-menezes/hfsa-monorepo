@@ -1,4 +1,4 @@
-import * as styles from './styles';
+import styles from './styles.module.css';
 import { InputProps } from './types';
 
 export const Input = ({ label, ...props }: InputProps) => {

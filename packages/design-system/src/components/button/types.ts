@@ -1,8 +1,7 @@
 import { ButtonHTMLAttributes } from 'react';
-import { styles } from './styles';
 
-type Variant = keyof typeof styles.variants;
-type Size = keyof typeof styles.sizes;
+type Variant = 'primary' | 'secondary' | 'destructive' | 'outline' | 'ghost' | 'link';
+type Size = 'sm' | 'md' | 'lg' | 'icon';
 
 export type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
   variant?: Variant;

@@ -6,8 +6,8 @@
   "scripts": {
     "build": "turbo run build",
     "dev": "turbo run dev",
-    "dev:main": "turbo run dev --filter=@hfsa/main-app",
-    "dev:main:with-mock": "turbo run dev:with-mock --filter=@hfsa/main-app",
+    "dev:main": "turbo run dev --filter=@hfsa/boilerplate",
+    "dev:main:with-mock": "turbo run dev:with-mock --filter=@hfsa/boilerplate",
     "dev:storybook": "turbo run storybook --filter=@hfsa/design-system",
     "lint": "turbo run lint",
     "lint:fix": "turbo run lint:fix",
@@ -20,7 +20,7 @@
     "test:integration": "turbo run test:integration",
     "clean": "turbo run clean",
     "reset": "yarn clean && rm -rf node_modules && rm -rf **/node_modules && yarn install",
-    "mock": "turbo run mock:api --filter=@hfsa/main-app",
+    "mock": "turbo run mock:api --filter=@hfsa/boilerplate",
     "changeset": "changeset",
     "version-packages": "changeset version",
     "release": "turbo run build --filter=./packages/* && changeset publish"

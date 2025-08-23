@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { signIn } from 'next-auth/react';
 import { useState } from 'react';
+import styles from './styles.module.css';
 
 export const Login = () => {
   const router = useRouter();
@@ -36,16 +37,16 @@ export const Login = () => {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center p-6">
-      <div className="w-full max-w-md space-y-4 border p-6 rounded">
-        <h1 className="text-xl font-semibold">Sign in</h1>
-        {error ? <p className="text-sm text-red-600">{error}</p> : null}
+    <div className={styles.container}>
+      <div className={styles.card}>
+        <h1 className={styles.title}>Sign in</h1>
+        {error ? <p className={styles.error}>{error}</p> : null}
         <Button type="button" onClick={onSignIn} disabled={loading}>
           {loading ? 'Redirecting…' : 'Sign in with Auth0'}
         </Button>
-        <p className="text-sm text-gray-600">
+        <p className={styles.description}>
           Go back to{' '}
-          <Link href="/" className="underline">
+          <Link href="/" className={styles.link}>
             Home
           </Link>
         </p>

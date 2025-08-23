@@ -1,14 +1,15 @@
 import { auth, signOut } from '@/libs/auth';
 import Link from 'next/link';
 import { redirect } from 'next/navigation';
+import styles from './styles.module.css';
 
 export const Header = async () => {
   const session = await auth();
 
   return (
-    <header className="flex items-center justify-between">
-      <h1 className="text-2xl font-semibold">HFSA Demo</h1>
-      <div className="space-x-3 text-sm">
+    <header className={styles.header}>
+      <h1 className={styles.title}>HFSA Demo</h1>
+      <div className={styles.nav}>
         {session ? (
           <form
             action={async () => {
@@ -33,12 +34,12 @@ export const Header = async () => {
               redirect('/');
             }}
           >
-            <button className="underline" type="submit">
+            <button className={styles.button} type="submit">
               Sign out ({session.user?.email ?? 'account'})
             </button>
           </form>
         ) : (
-          <Link href="/login" className="underline">
+          <Link href="/login" className={styles.link}>
             Sign in
           </Link>
         )}

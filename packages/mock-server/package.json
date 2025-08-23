@@ -12,9 +12,9 @@
     "dev": "tsc --watch",
     "start": "node dist/index.js",
     "start:mock": "node dist/cli.js mock",
-    "start:mock:main-app": "node dist/cli.js mock --spec ../../apps/main-app/public/openapi.yaml",
+    "start:mock:boilerplate": "node dist/cli.js mock --spec ../../apps/boilerplate/public/openapi.yaml",
     "start:docs": "node dist/cli.js docs",
-    "start:docs:main-app": "node dist/cli.js docs --spec ../../apps/main-app/public/openapi.yaml",
+    "start:docs:boilerplate": "node dist/cli.js docs --spec ../../apps/boilerplate/public/openapi.yaml",
     "check-types": "tsc --noEmit",
     "clean": "rm -rf dist"
   },

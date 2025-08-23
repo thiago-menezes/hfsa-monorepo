@@ -1,5 +1,5 @@
 {
-  "name": "@hfsa/main-app",
+  "name": "@hfsa/boilerplate",
   "version": "1.0.0",
   "private": true,
   "scripts": {
@@ -18,11 +18,11 @@
     "test:coverage": "vitest --coverage",
     "test:coverage:ui": "vitest --coverage --ui",
     "pregenerate:openapi": "yarn workspace @hfsa/openapi-ts build",
-    "generate:openapi": "yarn workspace @hfsa/openapi-ts generate -- --root ../../apps/main-app",
-    "mock:server": "yarn workspace @hfsa/mock-server start:mock:main-app",
+    "generate:openapi": "yarn workspace @hfsa/openapi-ts generate -- --root ../../apps/boilerplate",
+    "mock:server": "yarn workspace @hfsa/mock-server start:mock:boilerplate",
     "mock:api": "yarn generate:openapi && yarn mock:server",
     "start:mock": "yarn mock:server",
-    "docs:api": "yarn workspace @hfsa/mock-server start:docs:main-app"
+    "docs:api": "yarn workspace @hfsa/mock-server start:docs:boilerplate"
   },
   "dependencies": {
     "@hfsa/design-system": "workspace:*",
@@ -44,7 +44,6 @@
     "@hfsa/eslint-config": "workspace:*",
     "@hfsa/openapi-ts": "workspace:*",
     "@stoplight/prism-cli": "^5.14.2",
-    "@tailwindcss/postcss": "^4.1.12",
     "@testing-library/dom": "^10.4.1",
     "@testing-library/jest-dom": "^6.8.0",
     "@testing-library/react": "^16.3.0",
@@ -62,7 +61,6 @@
     "playwright": "^1.55.0",
     "postcss": "^8.5.6",
     "prettier": "^3.6.2",
-    "tailwindcss": "^4.1.12",
     "tsx": "^4.20.4",
     "typescript": "^5.9.2",
     "vite": "^7.1.3",

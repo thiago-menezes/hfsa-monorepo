@@ -22,7 +22,7 @@ This monorepo includes the following packages and apps:
 
 ### 🎯 Applications (`apps/`)
 
-- **`@hfsa/main-app`** - Main Next.js application with HFSA architecture
+- **`@hfsa/boilerplate`** - Main Next.js application with HFSA architecture
 - **`@hfsa/storybook`** - Design system documentation and playground
 - **`docs`** - Documentation site
 - **`web`** - Additional web application
@@ -50,6 +50,7 @@ All packages are 100% **TypeScript** with comprehensive type safety.
 ## 📋 Available Scripts
 
 ### Development
+
 ```bash
 yarn dev                # Start all development servers
 yarn dev:main          # Start main app only
@@ -57,12 +58,14 @@ yarn dev:storybook     # Start Storybook only
 ```
 
 ### Building
+
 ```bash
 yarn build             # Build all packages and apps
-yarn build --filter=@hfsa/main-app    # Build specific app
+yarn build --filter=@hfsa/boilerplate    # Build specific app
 ```
 
 ### Testing
+
 ```bash
 yarn test              # Run all tests
 yarn test:unit         # Run unit tests only
@@ -70,6 +73,7 @@ yarn test:integration  # Run integration tests only
 ```
 
 ### Code Quality
+
 ```bash
 yarn lint              # Lint all packages
 yarn format            # Format and fix all code
@@ -77,6 +81,7 @@ yarn check-types       # Type check all packages
 ```
 
 ### Maintenance
+
 ```bash
 yarn clean             # Clean all build artifacts
 yarn reset             # Full reset (clean + reinstall)

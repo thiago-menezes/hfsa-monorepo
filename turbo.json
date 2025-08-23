@@ -100,7 +100,7 @@
       "cache": false,
       "persistent": true
     },
-    "start:mock:main-app": {
+    "start:mock:boilerplate": {
       "dependsOn": ["build"],
       "cache": false,
       "persistent": true
@@ -110,7 +110,7 @@
       "cache": false,
       "persistent": true
     },
-    "start:docs:main-app": {
+    "start:docs:boilerplate": {
       "dependsOn": ["build"],
       "cache": false,
       "persistent": true
