@@ -48,10 +48,10 @@ export default defineConfig({
         extends: true,
         test: {
           name: 'unit',
-          include: ['src/**/.spec.ts', 'src/**/.spec.tsx'],
+          include: ['src/**/*.spec.ts', 'src/**/*.spec.tsx'],
           exclude: [
-            'src/**/.integration.spec.ts',
-            'src/**/.integration.spec.tsx',
+            'src/**/*.integration.spec.ts',
+            'src/**/*.integration.spec.tsx',
           ],
         },
       },
@@ -60,10 +60,10 @@ export default defineConfig({
         extends: true,
         test: {
           name: 'integration',
-          exclude: ['src/**/.spec.ts', 'src/**/.spec.tsx'],
+          exclude: ['src/**/*.spec.ts', 'src/**/*.spec.tsx'],
           include: [
-            'src/**/.integration.spec.ts',
-            'src/**/.integration.spec.tsx',
+            'src/**/*.integration.spec.ts',
+            'src/**/*.integration.spec.tsx',
           ],
           globalSetup: ['vitest.integration.setup.ts'],
         },

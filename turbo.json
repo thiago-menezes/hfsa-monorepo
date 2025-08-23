@@ -46,7 +46,7 @@
     },
     "test": {
       "dependsOn": ["^build"],
-      "inputs": ["$TURBO_DEFAULT$", "**/*.test.{ts,tsx}", "**/*.spec.{ts,tsx}"],
+      "inputs": ["$TURBO_DEFAULT$", "**/*.test.{ts,tsx}", "**/*.spec.{ts,tsx}", "**/*.stories.{ts,tsx}"],
       "env": [
         "NODE_ENV",
         "AUTH_URL",

@@ -9,7 +9,8 @@ export default defineConfig({
     jsxImportSource: 'react',
   },
   optimizeDeps: {
-    include: ['@testing-library/react'],
+    include: ['@testing-library/react', '@storybook/react'],
+    exclude: ['react-dom/test-utils', 'react-dom/client', 'react/jsx-runtime'],
   },
   resolve: {
     alias: {
@@ -47,7 +48,7 @@ export default defineConfig({
         extends: true,
         test: {
           name: 'unit',
-          include: ['src/**/.spec.ts', 'src/**/.spec.tsx'],
+          include: ['src/**/*.spec.ts', 'src/**/*.spec.tsx'],
         },
       },
       // Storybook tests

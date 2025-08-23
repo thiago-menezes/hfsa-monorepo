@@ -1,6 +1,17 @@
 import { setProjectAnnotations } from '@storybook/react';
-import * as projectAnnotations from './preview';
+import { beforeAll } from 'vitest';
 
-// This is an important step to apply the right configuration when testing your stories.
-// More info at: https://storybook.js.org/docs/api/portable-stories/portable-stories-vitest#setprojectannotations
-setProjectAnnotations([projectAnnotations]);
+beforeAll(async () => {
+  const projectAnnotations = {
+    parameters: {
+      controls: {
+        matchers: {
+          color: /(background|color)$/i,
+          date: /Date$/i,
+        },
+      },
+    },
+  };
+  
+  setProjectAnnotations([projectAnnotations]);
+});
