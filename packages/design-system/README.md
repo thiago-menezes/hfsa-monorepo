@@ -27,24 +27,37 @@ function App() {
 ## Components
 
 ### Button
-- `variant`: 'primary' | 'secondary' | 'outline' | 'ghost'
+
+- `variant`: 'primary' | 'secondary' | 'ghost'
 - `size`: 'sm' | 'md' | 'lg'
 
-### Input
-- Standard HTML input props
-- Built-in validation styles
-
 ### Dialog
+
 - Modal dialog component
 - Built-in backdrop and focus management
 
+### Heading
+
+- `as`: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6'
+- `size`: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6'
+- `weight`: 'light' | 'normal' | 'medium' | 'semibold' | 'bold'
+
+### Input
+
+- Standard HTML input props
+- Built-in validation styles
+
 ### Select
+
 - Dropdown select component
 - Custom styling support
 
-### Header
-- Application header component
-- Navigation and branding support
+### Text
+
+- `as`: 'p' | 'span' | 'div'
+- `size`: 'xs' | 'sm' | 'md' | 'lg' | 'xl'
+- `weight`: 'light' | 'normal' | 'medium' | 'semibold' | 'bold'
+- `color`: 'primary' | 'secondary' | 'success' | 'warning' | 'error' | 'inherit'
 
 ## Development
 

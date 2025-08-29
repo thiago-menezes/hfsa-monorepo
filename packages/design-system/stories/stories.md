@@ -27,10 +27,11 @@ Our design system includes:
 Browse the sidebar to explore our components:
 
 1. **Button** - Primary actions and navigation
-2. **Input** - Form inputs with validation
-3. **Dialog** - Modal dialogs and overlays
-4. **Select** - Dropdown selections
-5. **Header** - Application headers and navigation
+2. **Dialog** - Modal dialogs and overlays
+3. **Heading** - Typography headings with semantic HTML
+4. **Input** - Form inputs with validation
+5. **Select** - Dropdown selections
+6. **Text** - Typography text with various styles and colors
 
 ## Design Principles
 
