@@ -35,8 +35,8 @@
     "vitest.config.mjs",
     "**/*/.spec.tsx",
     "**/*/.spec.ts",
-    "**/*/.integration.spec.tsx",
-    "**/*/.integration.spec.ts"
+    "**/*/*.integration.spec.tsx",
+    "**/*/*.integration.spec.ts"
   ],
   "exclude": ["node_modules"]
 }
