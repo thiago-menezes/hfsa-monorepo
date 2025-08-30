@@ -1,28 +1,38 @@
-import { defineConfig, devices } from '@playwright/test';
+import type { PlaywrightTestConfig } from '@playwright/test';
+import { devices } from '@playwright/test';
 
-export default defineConfig({
-  testDir: '../',
-  fullyParallel: true,
-  forbidOnly: !!process.env.CI,
-  retries: process.env.CI ? 2 : 0,
-  workers: process.env.CI ? 1 : undefined,
-  reporter: 'html',
+const config: PlaywrightTestConfig = {
+  testDir: '../src',
+  testMatch: /.*\.stories\.spec\.(js|jsx|ts|tsx)$/,
+  testIgnore: [
+    /.*\.stories\.(js|jsx|ts|tsx)$/,
+    /.*\.spec\.(js|jsx|ts|tsx)$/,
+    /.*\.test\.(js|jsx|ts|tsx)$/,
+    /.*\/node_modules\/.*/,
+    /.*\/dist\/.*/,
+    /.*\/styled-system\/.*/,
+  ],
+  timeout: 30000,
+  retries: 2,
   use: {
     baseURL: 'http://localhost:6006',
     trace: 'on-first-retry',
+    screenshot: 'only-on-failure',
+  },
+  webServer: {
+    command: 'npm run storybook -- --port 6006',
+    url: 'http://localhost:6006',
+    timeout: 120000,
+    reuseExistingServer: !process.env.CI,
   },
   projects: [
     {
       name: 'chromium',
-      use: { ...devices['Desktop Chrome'] },
+      use: {
+        ...devices['Desktop Chrome'],
+      },
     },
   ],
-  webServer: {
-    command: 'npm run storybook',
-    url: 'http://localhost:6006',
-    reuseExistingServer: !process.env.CI,
-    timeout: 120 * 1000,
-  },
-  testMatch: '**/*.stories.@(js|jsx|ts|tsx)',
-  testIgnore: '**/node_modules/**',
-});
+};
+
+export default config;
