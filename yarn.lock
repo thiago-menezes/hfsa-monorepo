@@ -2604,6 +2604,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@playwright/test@npm:^1.55.0":
+  version: 1.55.0
+  resolution: "@playwright/test@npm:1.55.0"
+  dependencies:
+    playwright: "npm:1.55.0"
+  bin:
+    playwright: cli.js
+  checksum: 10c0/e68b59cd8271f1b57c0649fc0562ab2d5f6bba8c3653dd7bd52ca1338dc380fde34588d0254e3cd3f0f2b20af04a80dfb080419ceb7475990bb2fc4d8c474984
+  languageName: node
+  linkType: hard
+
 "@polka/url@npm:^1.0.0-next.24":
   version: 1.0.0-next.29
   resolution: "@polka/url@npm:1.0.0-next.29"
@@ -8036,6 +8047,7 @@ __metadata:
   dependencies:
     "@changesets/changelog-github": "npm:^0.5.1"
     "@changesets/cli": "npm:^2.29.6"
+    "@playwright/test": "npm:^1.55.0"
     prettier: "npm:^3.6.2"
     turbo: "npm:^2.5.6"
     typescript: "npm:5.9.2"
@@ -11336,7 +11348,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"playwright@npm:^1.14.0, playwright@npm:^1.55.0":
+"playwright@npm:1.55.0, playwright@npm:^1.14.0, playwright@npm:^1.55.0":
   version: 1.55.0
   resolution: "playwright@npm:1.55.0"
   dependencies:

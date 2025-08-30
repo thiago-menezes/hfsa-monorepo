@@ -27,12 +27,13 @@
     "clean": "rm -rf dist",
     "storybook": "panda cssgen && storybook dev -p 6006",
     "build-storybook": "panda cssgen && storybook build",
-    "test": "vitest run --config vitest.config.mts --project unit",
-    "test:ui": "vitest --ui",
-    "test:unit": "vitest run --project unit",
-    "test:storybook": "vitest run --project storybook",
-    "test:coverage": "vitest --coverage",
-    "test:coverage:ui": "vitest --coverage --ui"
+    "test": "vitest run --config vitest.config.mts",
+    "test:ui": "vitest --ui --config vitest.config.mts",
+    "test:unit": "vitest run --config vitest.config.mts",
+    "test:storybook": "vitest run --config vitest.storybook.config.mts",
+    "test:storybook:ui": "vitest --ui --config vitest.storybook.config.mts",
+    "test:coverage": "vitest --coverage --config vitest.config.mts",
+    "test:coverage:ui": "vitest --coverage --ui --config vitest.config.mts"
   },
   "keywords": [
     "design-system",

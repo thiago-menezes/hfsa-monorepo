@@ -2,7 +2,6 @@ import { resolve } from 'path';
 import { fileURLToPath } from 'url';
 import { defineConfig } from 'vitest/config';
 
-// More info at: https://storybook.js.org/docs/next/writing-tests/integrations/vitest-addon
 export default defineConfig({
   esbuild: {
     jsx: 'automatic',
@@ -17,7 +16,7 @@ export default defineConfig({
     },
   },
   test: {
-    environment: 'jsdom',
+    environment: 'happy-dom',
     setupFiles: ['.vitest-setup.ts'],
     globals: true,
     passWithNoTests: true,
@@ -42,32 +41,7 @@ export default defineConfig({
         },
       },
     },
-    projects: [
-      // Regular unit tests
-      {
-        extends: true,
-        test: {
-          name: 'unit',
-          include: ['src/**/*.spec.ts', 'src/**/*.spec.tsx'],
-          exclude: [
-            'src/**/*.integration.spec.ts',
-            'src/**/*.integration.spec.tsx',
-          ],
-        },
-      },
-      // Integration tests with Prism mock server
-      {
-        extends: true,
-        test: {
-          name: 'integration',
-          exclude: ['src/**/*.spec.ts', 'src/**/*.spec.tsx'],
-          include: [
-            'src/**/*.integration.spec.ts',
-            'src/**/*.integration.spec.tsx',
-          ],
-          globalSetup: ['vitest.integration.setup.ts'],
-        },
-      },
-    ],
+    include: ['src/**/*.{spec,test}.{ts,tsx}'],
+    exclude: ['**/node_modules/**', '**/*.d.ts'],
   },
 });

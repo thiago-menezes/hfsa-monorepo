@@ -35,7 +35,7 @@ const config: StorybookConfig = {
       },
       resolve: {
         alias: {
-          'react': require.resolve('react'),
+          react: require.resolve('react'),
           'react-dom': require.resolve('react-dom'),
         },
       },
