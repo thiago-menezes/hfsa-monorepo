@@ -103,9 +103,9 @@ export const Disabled: Story = {
     expect(toggle).toBeDisabled();
 
     // Test that clicking doesn't change state
-    const initialState = toggle.checked;
+    const initialState = (toggle as HTMLInputElement).checked;
     await userEvent.click(toggle);
-    expect(toggle.checked).toBe(initialState);
+    expect((toggle as HTMLInputElement).checked).toBe(initialState);
   },
 };
 

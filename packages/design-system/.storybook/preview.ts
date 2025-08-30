@@ -8,7 +8,6 @@ export const parameters = {
       date: /Date$/i,
     },
   },
-  actions: { argTypesRegex: '^on[A-Z].*' },
   interactions: {
     // Configuração para testes de interação
     testRunner: {
