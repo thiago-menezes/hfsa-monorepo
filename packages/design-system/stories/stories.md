@@ -26,7 +26,7 @@ Our design system includes:
 
 Browse the sidebar to explore our components:
 
-1. **Button** - Primary actions and navigation
+1. **Button** - Primary actions and navigation with icon support
 2. **Dialog** - Modal dialogs and overlays
 3. **Heading** - Typography headings with semantic HTML
 4. **Input** - Form inputs with validation

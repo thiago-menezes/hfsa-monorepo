@@ -30,6 +30,9 @@ function App() {
 
 - `variant`: 'primary' | 'secondary' | 'ghost'
 - `size`: 'sm' | 'md' | 'lg'
+- `icon`: ReactNode - Icon element to display
+- `iconPosition`: 'left' | 'right' | 'only' - Position of icon relative to text
+- `disabled`: boolean - Whether the button is disabled
 
 ### Dialog
 
