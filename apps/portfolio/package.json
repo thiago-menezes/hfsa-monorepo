@@ -9,7 +9,7 @@
     "typecheck": "tsc --noEmit",
     "lint": "eslint . --cache --cache-location ./node_modules/.cache/eslint/",
     "lint:fix": "eslint . --fix --cache --cache-location ./node_modules/.cache/eslint/",
-    "format": "prettier --write . && yarn lint:fix"
+    "format": "prettier --write . && pnpm lint:fix"
   },
   "dependencies": {
     "@hfsa/design-system": "workspace:*",
@@ -31,5 +31,5 @@
     "tsx": "^4.20.4",
     "typescript": "^5.9.2"
   },
-  "packageManager": "yarn@4.9.2"
+  "packageManager": "pnpm@9.0.0"
 }

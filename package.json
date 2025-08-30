@@ -14,12 +14,12 @@
     "format": "prettier --write \"**/*.{ts,tsx,md,json}\" && turbo run lint:fix",
     "check:types": "turbo run check-types",
     "check:prettier": "prettier . --check",
-    "check:all": "yarn lint && yarn check:types && yarn check:prettier",
+    "check:all": "pnpm lint && pnpm check:types && pnpm check:prettier",
     "test": "turbo run test",
     "test:unit": "turbo run test:unit",
     "test:integration": "turbo run test:integration",
     "clean": "turbo run clean",
-    "reset": "yarn clean && rm -rf node_modules && rm -rf **/node_modules && yarn install",
+    "reset": "pnpm clean && rm -rf node_modules && rm -rf **/node_modules && pnpm install",
     "mock": "turbo run mock:api --filter=@hfsa/boilerplate",
     "changeset": "changeset",
     "version-packages": "changeset version",
@@ -36,7 +36,7 @@
   "engines": {
     "node": ">=18"
   },
-  "packageManager": "yarn@4.9.3",
+  "packageManager": "pnpm@9.0.0",
   "workspaces": [
     "apps/*",
     "packages/*"
