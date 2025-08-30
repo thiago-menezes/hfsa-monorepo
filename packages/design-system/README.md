@@ -68,9 +68,6 @@ function App() {
 # Build the package
 yarn build
 
-# Run Storybook
-yarn storybook
-
 # Type checking
 yarn check-types
 

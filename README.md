@@ -13,7 +13,6 @@ yarn dev
 
 # Start specific apps
 yarn dev:main      # Main application
-yarn dev:storybook # Design system Storybook
 ```
 
 ## 📁 What's Inside?
@@ -23,7 +22,6 @@ This monorepo includes the following packages and apps:
 ### 🎯 Applications (`apps/`)
 
 - **`@hfsa/boilerplate`** - Main Next.js application with HFSA architecture
-- **`@hfsa/storybook`** - Design system documentation and playground
 - **`docs`** - Documentation site
 - **`web`** - Additional web application
 
@@ -43,7 +41,6 @@ All packages are 100% **TypeScript** with comprehensive type safety.
 - **🔗 [Next.js 15](https://nextjs.org/)** - Full-stack React framework
 - **📘 [TypeScript](https://typescriptlang.org/)** - Type-safe development
 - **🎨 [Tailwind CSS](https://tailwindcss.com/)** - Utility-first CSS framework
-- **📚 [Storybook](https://storybook.js.org/)** - Component development environment
 - **🧪 [Vitest](https://vitest.dev/)** - Fast unit testing framework
 - **🔍 [ESLint](https://eslint.org/) + [Prettier](https://prettier.io/)** - Code quality tools
 
@@ -54,7 +51,6 @@ All packages are 100% **TypeScript** with comprehensive type safety.
 ```bash
 yarn dev                # Start all development servers
 yarn dev:main          # Start main app only
-yarn dev:storybook     # Start Storybook only
 ```
 
 ### Building

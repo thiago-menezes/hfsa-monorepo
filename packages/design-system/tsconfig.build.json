@@ -1,4 +1,10 @@
 {
   "extends": "./tsconfig.json",
-  "exclude": ["node_modules", "dist", "storybook-static", "**/*.stories.tsx", "**/*.spec.tsx", "**/*.test.tsx", "vitest.d.ts"]
+  "exclude": [
+    "node_modules",
+    "dist",
+    "**/*.stories.tsx",
+    "**/*.spec.tsx",
+    "vitest.d.ts"
+  ]
 }

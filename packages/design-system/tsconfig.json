@@ -22,5 +22,5 @@
     "types": ["vitest/globals", "@testing-library/jest-dom"]
   },
   "include": ["src/**/*", "vitest.d.ts", "**/*.spec.tsx", "**/.spec.tsx"],
-  "exclude": ["node_modules", "dist", "storybook-static"]
+  "exclude": ["node_modules", "dist"]
 }

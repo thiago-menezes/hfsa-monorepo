@@ -14,12 +14,7 @@
     "build": {
       "dependsOn": ["^build"],
       "inputs": ["$TURBO_DEFAULT$", ".env*"],
-      "outputs": [
-        ".next/**",
-        "!.next/cache/**",
-        "dist/**",
-        "storybook-static/**"
-      ]
+      "outputs": [".next/**", "!.next/cache/**", "dist/**"]
     },
     "dev": {
       "cache": false,
@@ -46,7 +41,7 @@
     },
     "test": {
       "dependsOn": ["^build"],
-      "inputs": ["$TURBO_DEFAULT$", "**/*.test.{ts,tsx}", "**/*.spec.{ts,tsx}", "**/*.stories.{ts,tsx}"],
+      "inputs": ["$TURBO_DEFAULT$", "**/*.test.{ts,tsx}", "**/*.spec.{ts,tsx}"],
       "env": [
         "NODE_ENV",
         "AUTH_URL",
@@ -114,14 +109,6 @@
       "dependsOn": ["build"],
       "cache": false,
       "persistent": true
-    },
-    "storybook": {
-      "cache": false,
-      "persistent": true
-    },
-    "build-storybook": {
-      "dependsOn": ["build"],
-      "outputs": ["storybook-static/**"]
     }
   },
   "globalDependencies": [".env*"]
