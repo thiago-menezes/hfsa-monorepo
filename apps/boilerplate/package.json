@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
-    "dev:with-mock": "yarn mock:server & yarn dev",
+    "dev:with-mock": "pnpm mock:server & pnpm dev",
     "build": "next build",
     "start": "next start",
     "typecheck": "tsc --noEmit",
@@ -17,12 +17,12 @@
     "test:integration": "vitest run --include='src/**/*.integration.spec.{ts,tsx}'",
     "test:coverage": "vitest --coverage",
     "test:coverage:ui": "vitest --coverage --ui",
-    "pregenerate:openapi": "yarn workspace @hfsa/openapi-ts build",
-    "generate:openapi": "yarn workspace @hfsa/openapi-ts generate -- --root ../../apps/boilerplate",
-    "mock:server": "yarn workspace @hfsa/mock-server start:mock:boilerplate",
-    "mock:api": "yarn generate:openapi && yarn mock:server",
-    "start:mock": "yarn mock:server",
-    "docs:api": "yarn workspace @hfsa/mock-server start:docs:boilerplate"
+    "pregenerate:openapi": "pnpm -w --filter @hfsa/openapi-ts run build",
+    "generate:openapi": "pnpm -w --filter @hfsa/openapi-ts run generate -- --root ../../apps/boilerplate",
+    "mock:server": "pnpm -w --filter @hfsa/mock-server run start:mock:boilerplate",
+    "mock:api": "pnpm generate:openapi && pnpm mock:server",
+    "start:mock": "pnpm mock:server",
+    "docs:api": "pnpm -w --filter @hfsa/mock-server run start:docs:boilerplate"
   },
   "dependencies": {
     "@hfsa/design-system": "workspace:*",
@@ -67,5 +67,5 @@
     "vite": "^7.1.3",
     "vitest": "^3.2.4"
   },
-  "packageManager": "yarn@4.9.2"
+  "packageManager": "pnpm@9.0.0"
 }
