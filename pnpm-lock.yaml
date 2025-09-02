@@ -145,6 +145,55 @@ importers:
         specifier: ^3.2.4
         version: 3.2.4(@types/node@24.3.0)(@vitest/browser@3.2.4)(@vitest/ui@3.2.4)(happy-dom@18.0.1)(jsdom@26.1.0)(lightningcss@1.25.1)(sass@1.91.0)(tsx@4.20.5)(yaml@2.8.1)
 
+  apps/hfsa-site:
+    dependencies:
+      '@hfsa/design-system':
+        specifier: workspace:*
+        version: link:../../packages/design-system
+      clsx:
+        specifier: ^2.1.1
+        version: 2.1.1
+      next:
+        specifier: ^15.5.0
+        version: 15.5.2(@babel/core@7.28.3)(@playwright/test@1.55.0)(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(sass@1.91.0)
+      react:
+        specifier: ^19.1.1
+        version: 19.1.1
+      react-dom:
+        specifier: ^19.1.1
+        version: 19.1.1(react@19.1.1)
+      sass:
+        specifier: ^1.90.0
+        version: 1.91.0
+    devDependencies:
+      '@hfsa/eslint-config':
+        specifier: workspace:*
+        version: link:../../packages/eslint-config
+      '@types/node':
+        specifier: ^24.3.0
+        version: 24.3.0
+      '@types/react':
+        specifier: ^19.1.11
+        version: 19.1.12
+      '@types/react-dom':
+        specifier: ^19.1.7
+        version: 19.1.9(@types/react@19.1.12)
+      autoprefixer:
+        specifier: ^10.4.21
+        version: 10.4.21(postcss@8.5.6)
+      eslint:
+        specifier: ^9.34.0
+        version: 9.34.0
+      postcss:
+        specifier: ^8.5.6
+        version: 8.5.6
+      prettier:
+        specifier: ^3.6.2
+        version: 3.6.2
+      typescript:
+        specifier: ^5.9.2
+        version: 5.9.2
+
   apps/portfolio:
     dependencies:
       '@hfsa/design-system':
@@ -6390,7 +6439,7 @@ snapshots:
 
   '@stoplight/types@14.1.0':
     dependencies:
-      '@types/json-schema': 7.0.11
+      '@types/json-schema': 7.0.15
       utility-types: 3.11.0
 
   '@stoplight/types@14.1.1':
