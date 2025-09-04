@@ -23,7 +23,7 @@ export default defineConfig({
         'node_modules/',
         'coverage/',
         '**/*.d.ts',
-        '**/*stories.{ts,tsx}',
+        '**/stories.{ts,tsx}',
         '**/*.config.{js,ts,mjs,mts}',
         '**/types.ts',
       ],

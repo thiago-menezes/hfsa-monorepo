@@ -40,9 +40,12 @@ export class MockServer {
     );
     console.log(`📄 Using OpenAPI spec: ${specPath}`);
 
-    this.process = spawn('npx', ['prism', ...args], {
+    // Use the local prism installation directly
+    const prismPath = require.resolve('@stoplight/prism-cli/dist/index.js');
+
+    this.process = spawn('node', [prismPath, ...args], {
       stdio: 'inherit',
-      shell: true,
+      shell: false,
     });
 
     this.process.on('error', (error) => {

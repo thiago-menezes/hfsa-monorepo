@@ -15,3 +15,6 @@ export type { InputProps } from './components/input/types';
 export type { SelectProps } from './components/select/types';
 export type { TextProps } from './components/text/types';
 export type { ToggleProps } from './components/toggle/types';
+
+// Styles - Import the CSS file in your application
+// import '@hfsa/design-system/styles';

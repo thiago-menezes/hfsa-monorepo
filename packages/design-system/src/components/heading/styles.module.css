@@ -1,0 +1,60 @@
+/* Heading Component Styles */
+.heading {
+  font-family: var(--font-family-sans);
+  line-height: var(--line-height-tight);
+  color: var(--color-black);
+  margin: 0;
+  font-weight: var(--font-weight-semibold);
+}
+
+/* Sizes */
+.heading--h1 {
+  font-size: var(--font-size-3xl);
+  line-height: 1.1;
+}
+
+.heading--h2 {
+  font-size: var(--font-size-2xl);
+  line-height: 1.2;
+}
+
+.heading--h3 {
+  font-size: var(--font-size-xl);
+  line-height: 1.3;
+}
+
+.heading--h4 {
+  font-size: var(--font-size-lg);
+  line-height: 1.4;
+}
+
+.heading--h5 {
+  font-size: var(--font-size-base);
+  line-height: 1.5;
+}
+
+.heading--h6 {
+  font-size: var(--font-size-sm);
+  line-height: 1.6;
+}
+
+/* Weights */
+.heading--light {
+  font-weight: var(--font-weight-light);
+}
+
+.heading--normal {
+  font-weight: var(--font-weight-normal);
+}
+
+.heading--medium {
+  font-weight: var(--font-weight-medium);
+}
+
+.heading--semibold {
+  font-weight: var(--font-weight-semibold);
+}
+
+.heading--bold {
+  font-weight: var(--font-weight-bold);
+}

@@ -1,6 +1,6 @@
 import { clsx } from 'clsx';
 import { ButtonProps } from './types';
-import { buttonStyles } from './styles';
+import styles from './styles.module.css';
 
 export const Button = ({
   variant = 'primary',
@@ -12,33 +12,38 @@ export const Button = ({
   ...props
 }: ButtonProps) => {
   const isIconOnly = iconPosition === 'only' || (!children && icon);
-  
+
   return (
     <button
       className={clsx(
-        buttonStyles.base,
-        buttonStyles.variants[variant],
-        buttonStyles.sizes[size],
-        isIconOnly && buttonStyles.iconOnly,
-        isIconOnly && `${buttonStyles.iconOnly}.${size}`,
+        styles.button,
+        styles[`button--${variant}`],
+        styles[`button--${size}`],
+        isIconOnly && styles['button--icon-only'],
         className,
       )}
       {...props}
     >
       {icon && iconPosition === 'left' && !isIconOnly && (
-        <span className="button-icon-left">{icon}</span>
+        <span
+          className={clsx(styles.button__icon, styles['button__icon--left'])}
+        >
+          {icon}
+        </span>
       )}
-      
-      {children && (
-        <span className="button-content">{children}</span>
-      )}
-      
+
+      {children && <span className={styles.button__content}>{children}</span>}
+
       {icon && iconPosition === 'right' && !isIconOnly && (
-        <span className="button-icon-right">{icon}</span>
+        <span
+          className={clsx(styles.button__icon, styles['button__icon--right'])}
+        >
+          {icon}
+        </span>
       )}
-      
+
       {icon && isIconOnly && (
-        <span className="button-icon-only">{icon}</span>
+        <span className={styles.button__icon}>{icon}</span>
       )}
     </button>
   );

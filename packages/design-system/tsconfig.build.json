@@ -3,8 +3,17 @@
   "exclude": [
     "node_modules",
     "dist",
-    "**/*.stories.tsx",
+    "**/stories.tsx",
+    "**/stories.ts",
+    "**/stories.mdx",
     "**/*.spec.tsx",
     "vitest.d.ts"
-  ]
+  ],
+  "compilerOptions": {
+    "allowJs": false,
+    "declaration": true,
+    "declarationMap": true,
+    "emitDeclarationOnly": false,
+    "noEmit": false
+  }
 }

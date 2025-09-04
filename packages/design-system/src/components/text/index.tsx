@@ -1,12 +1,12 @@
 import { clsx } from 'clsx';
 import { TextProps } from './types';
-import { textStyles } from './styles';
+import styles from './styles.module.css';
 
 export const Text = ({
   as = 'p',
   size = 'md',
   weight = 'normal',
-  color = 'secondary',
+  color = 'black',
   children,
   className,
   ...props
@@ -16,10 +16,10 @@ export const Text = ({
   return (
     <Component
       className={clsx(
-        textStyles.base,
-        textStyles.sizes[size],
-        textStyles.weights[weight],
-        textStyles.colors[color],
+        styles.text,
+        styles[`text--${size}`],
+        styles[`text--${weight}`],
+        styles[`text--${color}`],
         className,
       )}
       {...props}

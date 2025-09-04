@@ -1,7 +1,7 @@
 import { useCallback, useMemo, useState } from 'react';
 import { clsx } from 'clsx';
 import { ToggleProps } from './types';
-import { toggleStyles } from './styles';
+import styles from './styles.module.css';
 
 export const Toggle = ({
   label,
@@ -32,24 +32,24 @@ export const Toggle = ({
   );
 
   return (
-    <label className={clsx(toggleStyles.wrapper, className)}>
+    <label className={clsx(styles.toggle__wrapper, className)}>
       <span
         className={clsx(
-          toggleStyles.switch,
-          isOn && toggleStyles.switchChecked,
-          isFocused && toggleStyles.switchFocus,
-          disabled && toggleStyles.switchDisabled,
+          styles.toggle__switch,
+          isOn && styles['toggle__switch--checked'],
+          isFocused && styles['toggle__switch--focus'],
+          disabled && styles['toggle__switch--disabled'],
         )}
       >
         <span
           className={clsx(
-            toggleStyles.thumb,
-            isOn && toggleStyles.thumbChecked,
+            styles.toggle__thumb,
+            isOn && styles['toggle__thumb--checked'],
           )}
         />
         <input
           type="checkbox"
-          className={toggleStyles.input}
+          className={styles.toggle__input}
           checked={isControlled ? isOn : undefined}
           defaultChecked={!isControlled ? defaultChecked : undefined}
           onChange={handleChange}
@@ -61,7 +61,7 @@ export const Toggle = ({
           {...rest}
         />
       </span>
-      {label ? <span className={toggleStyles.label}>{label}</span> : null}
+      {label ? <span className={styles.toggle__label}>{label}</span> : null}
     </label>
   );
 };

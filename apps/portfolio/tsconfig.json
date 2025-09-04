@@ -18,7 +18,7 @@
         "name": "next"
       }
     ],
-    "types": ["vitest/globals", "node"],
+    "types": ["node"],
     "paths": {
       "@/*": ["./src/*"],
       "@root/*": ["./*"]
@@ -31,12 +31,7 @@
     "**/*.tsx",
     "**/*.d.ts",
     ".next/types/**/*.ts",
-    "postcss.config.js",
-    "vitest.config.mjs",
-    "**/*/*.spec.tsx",
-    "**/*/*.spec.ts",
-    "**/*/*.integration.spec.tsx",
-    "**/*/*.integration.spec.ts"
+    "postcss.config.js"
   ],
   "exclude": ["node_modules"]
 }

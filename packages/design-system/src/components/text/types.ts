@@ -8,6 +8,7 @@ type Color =
   | 'success'
   | 'warning'
   | 'error'
+  | 'black'
   | 'inherit';
 
 export type TextProps = HTMLAttributes<HTMLParagraphElement> & {

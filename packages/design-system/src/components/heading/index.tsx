@@ -1,6 +1,6 @@
 import { clsx } from 'clsx';
 import { HeadingProps } from './types';
-import { headingStyles } from './styles';
+import styles from './styles.module.css';
 
 export const Heading = ({
   as = 'h1',
@@ -14,9 +14,9 @@ export const Heading = ({
   return (
     <Component
       className={clsx(
-        headingStyles.base,
-        headingStyles.sizes[as],
-        headingStyles.weights[weight],
+        styles.heading,
+        styles[`heading--${as}`],
+        styles[`heading--${weight}`],
         className,
       )}
       {...props}

@@ -1,11 +1,11 @@
 import { SelectProps } from './types';
-import { selectStyles } from './styles';
+import styles from './styles.module.css';
 
 export const Select = ({ label, children, ...props }: SelectProps) => {
   return (
-    <label className={selectStyles.wrapper}>
-      {label ? <span className={selectStyles.label}>{label}</span> : null}
-      <select className={selectStyles.select} {...props}>
+    <label className={styles.select__wrapper}>
+      {label ? <span className={styles.select__label}>{label}</span> : null}
+      <select className={styles.select__field} {...props}>
         {children}
       </select>
     </label>

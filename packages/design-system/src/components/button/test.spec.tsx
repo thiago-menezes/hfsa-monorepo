@@ -37,7 +37,7 @@ describe('Button', () => {
     render(
       <Button icon={<TestIcon />} iconPosition="left">
         With Icon
-      </Button>
+      </Button>,
     );
     expect(screen.getByTestId('test-icon')).toBeInTheDocument();
     expect(screen.getByText('With Icon')).toBeInTheDocument();
@@ -47,7 +47,7 @@ describe('Button', () => {
     render(
       <Button icon={<TestIcon />} iconPosition="right">
         With Icon
-      </Button>
+      </Button>,
     );
     expect(screen.getByTestId('test-icon')).toBeInTheDocument();
     expect(screen.getByText('With Icon')).toBeInTheDocument();
@@ -55,14 +55,16 @@ describe('Button', () => {
 
   it('renders icon only button', () => {
     render(
-      <Button 
-        icon={<TestIcon />} 
-        iconPosition="only" 
+      <Button
+        icon={<TestIcon />}
+        iconPosition="only"
         aria-label="Icon button"
-      />
+      />,
     );
     expect(screen.getByTestId('test-icon')).toBeInTheDocument();
-    expect(screen.getByRole('button', { name: /icon button/i })).toBeInTheDocument();
+    expect(
+      screen.getByRole('button', { name: /icon button/i }),
+    ).toBeInTheDocument();
   });
 
   it('renders disabled button', () => {
@@ -84,13 +86,10 @@ describe('Button', () => {
   });
 
   it('handles icon only without children', () => {
-    render(
-      <Button 
-        icon={<TestIcon />} 
-        aria-label="Icon only"
-      />
-    );
+    render(<Button icon={<TestIcon />} aria-label="Icon only" />);
     expect(screen.getByTestId('test-icon')).toBeInTheDocument();
-    expect(screen.getByRole('button', { name: /icon only/i })).toBeInTheDocument();
+    expect(
+      screen.getByRole('button', { name: /icon only/i }),
+    ).toBeInTheDocument();
   });
 });
