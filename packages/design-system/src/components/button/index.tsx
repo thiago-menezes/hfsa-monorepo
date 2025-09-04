@@ -1,6 +1,7 @@
 import { clsx } from 'clsx';
-import { ButtonProps } from './types';
+
 import styles from './styles.module.css';
+import { ButtonProps } from './types';
 
 export const Button = ({
   variant = 'primary',

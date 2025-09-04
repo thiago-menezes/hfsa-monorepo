@@ -1,4 +1,5 @@
 import { Metadata } from 'next';
+
 import { Login } from '@/features/login';
 
 export const metadata: Metadata = {

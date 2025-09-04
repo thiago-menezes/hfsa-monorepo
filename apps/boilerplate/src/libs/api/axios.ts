@@ -1,5 +1,6 @@
 import axios from 'axios';
 import { signOut } from 'next-auth/react';
+
 import { getAccessToken } from './token';
 
 export const createApiClient = (addAuthInterceptor: boolean = false) => {
@@ -36,7 +37,7 @@ export const createApiClient = (addAuthInterceptor: boolean = false) => {
     (response) => response,
     async (error) => {
       if (process.env.NODE_ENV === 'development') {
-        console.error('Request error:', error);
+        throw new Error(`Request error: ${error}`);
       }
       if (error?.response?.status === 401 && typeof window !== 'undefined') {
         await signOut({ callbackUrl: '/auth/signin' });

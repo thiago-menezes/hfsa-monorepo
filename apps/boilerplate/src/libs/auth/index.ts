@@ -1,5 +1,6 @@
 import NextAuth, { NextAuthConfig } from 'next-auth';
 import Auth0 from 'next-auth/providers/auth0';
+
 import { fetchAuth0UserInfo } from '../api/token';
 import { SessionUser } from '../api/types';
 

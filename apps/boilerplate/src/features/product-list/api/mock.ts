@@ -1,4 +1,5 @@
 import { SimpleEndpoint } from '@hfsa/openapi-ts/src/types';
+
 import { ProductSearchResponse } from './types';
 
 const productListMock: SimpleEndpoint = {

@@ -1,5 +1,7 @@
+/* eslint-disable no-console */
 import { exec } from 'node:child_process';
 import { promisify } from 'node:util';
+
 import { MockServer } from '@hfsa/mock-server';
 
 const execAsync = promisify(exec);

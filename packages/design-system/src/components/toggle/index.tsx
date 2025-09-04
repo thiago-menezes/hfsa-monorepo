@@ -1,7 +1,8 @@
-import { useCallback, useMemo, useState } from 'react';
 import { clsx } from 'clsx';
-import { ToggleProps } from './types';
+import { useCallback, useMemo, useState } from 'react';
+
 import styles from './styles.module.css';
+import { ToggleProps } from './types';
 
 export const Toggle = ({
   label,

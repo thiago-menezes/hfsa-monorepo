@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect } from 'react';
+
 import styles from './error.module.css';
 
 export default function GlobalError({

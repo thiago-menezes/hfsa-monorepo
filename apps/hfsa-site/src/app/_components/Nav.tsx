@@ -1,24 +1,24 @@
-"use client";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
-import { clsx } from "clsx";
+'use client';
+import { clsx } from 'clsx';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
 const link = (href: string, label: string, pathname: string) => (
   <Link
     key={href}
     href={href}
     className={clsx(
-      "muted",
+      'muted',
       {
         active: pathname === href,
       }
     )}
     style={{
-      padding: "8px 10px",
+      padding: '8px 10px',
       borderRadius: 8,
-      border: pathname === href ? "1px solid rgba(255,255,255,0.18)" : "1px solid transparent",
-      color: pathname === href ? "#fff" : undefined,
-      background: pathname === href ? "rgba(255,255,255,0.06)" : "transparent",
+      border: pathname === href ? '1px solid rgba(255,255,255,0.18)' : '1px solid transparent',
+      color: pathname === href ? '#fff' : undefined,
+      background: pathname === href ? 'rgba(255,255,255,0.06)' : 'transparent',
     }}
   >
     {label}
@@ -28,18 +28,18 @@ const link = (href: string, label: string, pathname: string) => (
 export function Nav() {
   const pathname = usePathname();
   return (
-    <nav className="container" style={{ display: "flex", alignItems: "center", justifyContent: "space-between", padding: "16px 0" }}>
+    <nav className="container" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '16px 0' }}>
       <Link href="/" className="pill" style={{ fontWeight: 700 }}>
         hfsa
         <span style={{ opacity: 0.75, fontWeight: 500 }}>
           Hybrid Feature Scoped Architecture
         </span>
       </Link>
-      <div style={{ display: "flex", gap: 12 }}>
-        {link("/docs", "Docs", pathname)}
-        {link("/docs/architecture", "Architecture", pathname)}
-        {link("/docs/packages", "Packages", pathname)}
-        {link("/playground", "Playground", pathname)}
+      <div style={{ display: 'flex', gap: 12 }}>
+        {link('/docs', 'Docs', pathname)}
+        {link('/docs/architecture', 'Architecture', pathname)}
+        {link('/docs/packages', 'Packages', pathname)}
+        {link('/playground', 'Playground', pathname)}
       </div>
     </nav>
   );

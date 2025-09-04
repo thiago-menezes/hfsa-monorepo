@@ -1,4 +1,5 @@
 import { render, screen } from '@testing-library/react';
+
 import { Select } from '.';
 
 it('renders select with label', () => {

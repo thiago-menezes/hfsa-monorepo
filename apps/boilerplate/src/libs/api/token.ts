@@ -1,6 +1,7 @@
 import type { Profile, User } from 'next-auth';
 import type { JWT } from 'next-auth/jwt';
 import { getSession } from 'next-auth/react';
+
 import { AccessTokenSession } from './types';
 
 export async function getAccessToken(): Promise<string | null> {

@@ -1,6 +1,7 @@
 import { clsx } from 'clsx';
-import { HeadingProps } from './types';
+
 import styles from './styles.module.css';
+import { HeadingProps } from './types';
 
 export const Heading = ({
   as = 'h1',

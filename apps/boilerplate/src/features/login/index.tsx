@@ -2,8 +2,9 @@
 
 import { Button } from '@hfsa/design-system';
 import Link from 'next/link';
-import styles from './styles.module.scss';
+
 import { useLogin } from './hook';
+import styles from './styles.module.scss';
 
 export const Login = () => {
   const { onSignIn, loading, error } = useLogin();

@@ -1,7 +1,8 @@
 import type { Metadata } from 'next';
+
 import './globals.css';
-import { Nav } from './_components/Nav';
 import { Footer } from './_components/Footer';
+import { Nav } from './_components/Nav';
 
 export const metadata: Metadata = {
   title: 'HFSA – Hybrid Feature Scoped Architecture',

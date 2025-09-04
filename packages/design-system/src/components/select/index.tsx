@@ -1,5 +1,5 @@
-import { SelectProps } from './types';
 import styles from './styles.module.css';
+import { SelectProps } from './types';
 
 export const Select = ({ label, children, ...props }: SelectProps) => {
   return (

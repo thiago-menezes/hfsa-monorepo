@@ -1,7 +1,9 @@
-import { auth, signOut } from '@/libs/auth';
 import Link from 'next/link';
 import { redirect } from 'next/navigation';
+
 import styles from './styles.module.scss';
+
+import { auth, signOut } from '@/libs/auth';
 
 export const Header = async () => {
   const session = await auth();

@@ -1,6 +1,7 @@
 import { clsx } from 'clsx';
-import { TextProps } from './types';
+
 import styles from './styles.module.css';
+import { TextProps } from './types';
 
 export const Text = ({
   as = 'p',

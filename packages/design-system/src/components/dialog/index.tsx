@@ -1,6 +1,6 @@
 'use client';
-import { DialogProps } from './types';
 import styles from './styles.module.css';
+import { DialogProps } from './types';
 
 export const Dialog = ({ open, onClose, title, children }: DialogProps) => {
   if (!open) return null;
